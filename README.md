@@ -1,4 +1,6 @@
-# Parcial2S6RaulSebastianRuizAragon202321332
+# Parcial 2 Práctico
+## Raúl Sebastián Ruiz Aragón
+## 202321332
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
 
