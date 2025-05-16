@@ -1,0 +1,16 @@
+<div class="container mt-5" *ngIf="aerolinea">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">{{ aerolinea.airlineName }}</h2>
+
+      <p><strong>País:</strong> {{ aerolinea.country }}</p>
+      <p><strong>Ciudad:</strong> {{ aerolinea.city }}</p>
+      <p><strong>Dirección:</strong> {{ aerolinea.address }}</p>
+      <p><strong>Slogan:</strong> "{{ aerolinea.slogan }}"</p>
+
+      <div class="mt-4 text-center">
+        <button class="btn btn-primary" (click)="verVuelos()">Ver vuelos</button>
+      </div>
+    </div>
+  </div>
+</div>

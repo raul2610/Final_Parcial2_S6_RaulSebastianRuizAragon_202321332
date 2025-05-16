@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <div class="row">
+    <ng-container *ngFor="let aerolinea of aerolineas; let i = index">
+      <div class="col-md-4 mb-4" *ngIf="i < 4">
+        <div
+          class="p-4 text-white rounded text-center"
+          [style.backgroundColor]="aerolinea.identityColor"
+          style="height: 100%; cursor: pointer"
+          [routerLink]="['/aerolinea', aerolinea.id]"
+        >
+          <h4>{{ aerolinea.airlineName }}</h4>
+        </div>
+      </div>
+
+      <!-- logo-->
+      <div class="col-md-4 mb-4" *ngIf="i === 4">
+        <div
+          class="p-4 bg-white text-center text-dark fw-bold border"
+          style="height: 100%; display: flex; align-items: center; justify-content: center;"
+        >
+          <div>
+            <div style="font-size: 18px;">Aerolíneas de los Andes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" *ngIf="i === 4">
+        <div
+          class="p-4 text-white rounded text-center"
+          [style.backgroundColor]="aerolinea.identityColor"
+          style="height: 100%; cursor: pointer"
+          [routerLink]="['/aerolinea', aerolinea.id]"
+        >
+          <h4>{{ aerolinea.airlineName }}</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" *ngIf="i > 4">
+        <div
+          class="p-4 text-white rounded text-center"
+          [style.backgroundColor]="aerolinea.identityColor"
+          style="height: 100%; cursor: pointer"
+          [routerLink]="['/aerolinea', aerolinea.id]"
+        >
+          <h4>{{ aerolinea.airlineName }}</h4>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
