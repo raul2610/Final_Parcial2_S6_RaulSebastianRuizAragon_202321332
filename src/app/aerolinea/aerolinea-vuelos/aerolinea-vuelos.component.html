@@ -1,30 +1,35 @@
 <div class="container mt-5" *ngIf="aerolinea">
-  <div class="card shadow mb-4">
-    <div class="card-body">
-      <h2 class="card-title text-center mb-4">{{ aerolinea.airlineName }}</h2>
-
-      <p><strong>País:</strong> {{ aerolinea.country }}</p>
-      <p><strong>Ciudad:</strong> {{ aerolinea.city }}</p>
-      <p><strong>Dirección:</strong> {{ aerolinea.address }}</p>
-      <p><strong>Slogan:</strong> "{{ aerolinea.slogan }}"</p>
-    </div>
-  </div>
-
-  <h3 class="mb-4 text-center">Vuelos</h3>
-
   <div class="row">
-    <div class="col-md-6 mb-4" *ngFor="let vuelo of aerolinea.flights">
-      <div class="card h-100 shadow">
-        <div class="row g-0 h-100">
-          <div class="col-md-4 d-flex align-items-center justify-content-center p-2">
-            <img [src]="vuelo.image" class="img-fluid rounded" alt="Imagen del vuelo" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <p><strong>Salida:</strong> {{ vuelo.departureAirport }} ({{ vuelo.departureCity }}, {{ vuelo.departureCountry }})</p>
-              <p><strong>Llegada:</strong> {{ vuelo.arrivalAirport }} ({{ vuelo.arrivalCity }}, {{ vuelo.arrivalCountry }})</p>
-              <p><strong>Hora de salida:</strong> {{ vuelo.departureTime }}</p>
-              <p><strong>Duración:</strong> {{ vuelo.flightDuration }} horas</p>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">{{ aerolinea.airlineName }}</h2>
+
+          <p><strong>País:</strong> {{ aerolinea.country }}</p>
+          <p><strong>Ciudad:</strong> {{ aerolinea.city }}</p>
+          <p><strong>Dirección:</strong> {{ aerolinea.address }}</p>
+          <p><strong>Slogan:</strong> "{{ aerolinea.slogan }}"</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <h3 class="mb-4 text-center">Vuelos</h3>
+      <div class="row">
+        <div class="col-md-12 mb-4" *ngFor="let vuelo of aerolinea.flights">
+          <div class="card h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 d-flex align-items-center justify-content-center p-2">
+                <img [src]="vuelo.image" class="img-fluid rounded" alt="Imagen del vuelo" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p><strong>Salida:</strong> {{ vuelo.departureAirport }} ({{ vuelo.departureCity }}, {{ vuelo.departureCountry }})</p>
+                  <p><strong>Llegada:</strong> {{ vuelo.arrivalAirport }} ({{ vuelo.arrivalCity }}, {{ vuelo.arrivalCountry }})</p>
+                  <p><strong>Hora de salida:</strong> {{ vuelo.departureTime }}</p>
+                  <p><strong>Duración:</strong> {{ vuelo.flightDuration }} horas</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
